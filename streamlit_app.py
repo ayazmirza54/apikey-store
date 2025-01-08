@@ -111,13 +111,13 @@ with tab2:
                 st.rerun()
 
 # Copy API Key to clipboard
-if st.query_params().get("key"):
+if st.query_params.get("key"):
     st.write(
         """
         <script>
         navigator.clipboard.writeText("{key}");
         </script>
-        """.format(key=st.query_params()["key"][0]),
+        """.format(key=st.query_params["key"][0]),
         unsafe_allow_html=True,
     )
     st.success("API Key copied to clipboard!")
