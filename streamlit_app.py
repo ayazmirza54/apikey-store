@@ -85,7 +85,7 @@ with tab1:
             )
             if col3.button("Delete", key=f"delete_{service}"):
                 delete_key(service)
-                st.experimental_rerun()
+                st.rerun()
 
         if not filtered_keys:
             st.info("No matching keys found.")
@@ -108,7 +108,7 @@ with tab2:
             else:
                 save_key(service_name, api_key)
                 st.success("API key added successfully.")
-                st.experimental_rerun()
+                st.rerun()
 
 # Copy API Key to clipboard
 if st.query_params().get("key"):
