@@ -117,7 +117,7 @@ if st.query_params().get("key"):
         <script>
         navigator.clipboard.writeText("{key}");
         </script>
-        """.format(key=st.experimental_get_query_params()["key"][0]),
+        """.format(key=st.query_params()["key"][0]),
         unsafe_allow_html=True,
     )
     st.success("API Key copied to clipboard!")
