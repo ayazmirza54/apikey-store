@@ -111,7 +111,7 @@ with tab2:
                 st.experimental_rerun()
 
 # Copy API Key to clipboard
-if st.experimental_get_query_params().get("key"):
+if st.query_params().get("key"):
     st.write(
         """
         <script>
