@@ -2,8 +2,16 @@ import streamlit as st
 from cryptography.fernet import Fernet
 from tinydb import TinyDB, Query
 import os
+import warnings
 
-# Generate encryption key (store securely, not in the code in production)
+
+# Suppress all warnings
+warnings.filterwarnings("ignore")
+
+# Your Streamlit app code here
+
+# Suppress Streamlit warnings
+
 def get_fernet_key():
     if not os.path.exists("fernet_key.key"):
         key = Fernet.generate_key()
